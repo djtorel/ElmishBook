@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch01-Understanding-Fable", "Ch01-Understanding-Fable", "{9DAA263A-BD0C-4EF7-8C66-25AAB2C4CAA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "P01-HelloWorld", "P01-HelloWorld", "{5D0EA3B7-029B-448A-B48B-76EE180E1318}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "App", "Ch01\01-HelloWorld\fable-getting-started\src\App.fsproj", "{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5D0EA3B7-029B-448A-B48B-76EE180E1318} = {9DAA263A-BD0C-4EF7-8C66-25AAB2C4CAA4}
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6} = {5D0EA3B7-029B-448A-B48B-76EE180E1318}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Debug|x64.Build.0 = Debug|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Debug|x86.Build.0 = Debug|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Release|x64.ActiveCfg = Release|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Release|x64.Build.0 = Release|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B446F51-0A38-4FE5-B7E3-D2B6226D52D6}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
