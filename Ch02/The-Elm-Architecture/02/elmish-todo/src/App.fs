@@ -1,5 +1,6 @@
 module App
 
+open System
 open Elmish
 open Elmish.React
 open Feliz
@@ -10,38 +11,36 @@ type DivProps =
     | DivStyles of IStyleAttribute list
 
 type Todo =
-    { Id : int
+    { Id : Guid
       Description : string
       Completed : bool }
 
 type TodoBeingEdited =
-    { Id: int
+    { Id: Guid
       Description: string }
 
 type State =
     { TodoList : Todo list
       TodoBeingEdited : TodoBeingEdited option
-      NewTodo : string
-      CurrentId : int }
+      NewTodo : string }
 
 type Msg =
     | SetNewTodo of string
     | AddNewTodo
-    | ToggleCompleted of int
-    | DeleteTodo of int
+    | ToggleCompleted of Guid
+    | DeleteTodo of Guid
     | CancelEdit
     | ApplyEdit
-    | StartEditingTodo of int
+    | StartEditingTodo of Guid
     | SetEditedDescription of string
 
 let init() =
     { TodoList =
-        [ { Id = 0
+        [ { Id = Guid.NewGuid()
             Description = "Learn F#"
             Completed = false } ]
       TodoBeingEdited = None
-      NewTodo  = ""
-      CurrentId = 1 }
+      NewTodo  = ""}
 
 let update (msg: Msg) (state: State): State =
     match msg with
@@ -64,13 +63,12 @@ let update (msg: Msg) (state: State): State =
     | AddNewTodo when state.NewTodo = "" -> state
     | AddNewTodo ->
         let nextTodo =
-            { Id = state.CurrentId
+            { Id = Guid.NewGuid()
               Description = state.NewTodo
               Completed = false }
 
         { state with
             NewTodo = ""
-            CurrentId = state.CurrentId + 1
             TodoList = List.append state.TodoList [nextTodo] }
     | StartEditingTodo todoId ->
         let nextEditModel =
